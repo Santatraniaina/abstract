@@ -9,3 +9,56 @@
 html{
     font-family: sans-serif;
 }
+
+body{
+    margin: 0;
+}
+
+h1{
+    margin: 0;
+}
+
+
+
+.black-and-white{
+    background-color: var(--abs-black);
+    color: var(--abs-white);
+}
+
+.search{
+    background-color: var(--abs-grey);
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.main-content{
+    height: 100vw;
+}
+
+.assistant{
+    background-color: var(--abs-blue);
+    color: var(--abs-white);
+    font-size: 1rem;
+    font-weight: bold;
+    text-align: center;
+    padding: 15px 30px;
+    border-radius: 30px;
+    border-style: none;
+    position: fixed;
+    bottom: 2%;
+    right: 2%;
+}
+
+header{
+    height: 80px;
+}
+
+footer{
+    height: 250px;
+    bottom: 0%;
+    left: 0%;
+    right: 0%;
+}
