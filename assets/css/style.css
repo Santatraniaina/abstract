@@ -1,0 +1,11 @@
+:root{
+    /* Color Palette*/
+    --abs-blue : #4C5FD5;
+    --abs-grey : #dadbf1;
+    --abs-black : #000000;
+    --abs-white : #fff;
+}
+
+html{
+    font-family: sans-serif;
+}
