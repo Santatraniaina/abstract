@@ -20,6 +20,21 @@ h1, h2{
     margin: 0;
 }
 
+ul{
+    padding: 0;
+}
+
+li {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+    color: var(--abs-white);
+}
+a:hover{
+    text-decoration: underline;
+}
+
 .black-and-white{
     background-color: var(--abs-black);
     color: var(--abs-white);
@@ -130,7 +145,7 @@ button[type="submit"]:hover{
 }
 
 .main-content{
-    height: 100vw;
+    /* height: 100vw; */
 }
 
 .assistant{
@@ -147,9 +162,32 @@ button[type="submit"]:hover{
     right: 2%;
 }
 
-footer{
-    height: 250px;
+.footer{
     bottom: 0%;
     left: 0%;
     right: 0%;
+    padding: 2em 4em;
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-left{
+    display: flex;
+    gap: 1.5rem;
+    /* Need media query breakpoint */
+    width: 80%;
+    justify-content: space-evenly;
+    /* --------------------------- */
+}
+
+.footer-right{
+    width: 20%;
+    height: 20em;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.footer-menu-list, .footer-text{
+    line-height: 1.5rem;
 }
