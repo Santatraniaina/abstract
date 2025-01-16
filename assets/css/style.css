@@ -241,12 +241,6 @@ button[type="submit"]:hover{
     color: var(--abs-blue);
 }
 
-
-.main-content{
-    /* height: 100vw; */
-}
-
-
 .footer{
     bottom: 0%;
     left: 0%;
