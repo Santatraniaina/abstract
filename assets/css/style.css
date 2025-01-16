@@ -98,6 +98,61 @@ button{
     border-bottom: var(--abs-white) 1px solid;
 }
 
+/* Hamburger Menu */
+/* Hamburger Menu Container */
+.hamburger-menu{
+    width: 26px;
+    height: 32px;
+    cursor: pointer;
+    background-color: var(--abs-blue);
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+/* INITIAL STATE */
+/* Hamburger Menu 3 Lines, the input is the middle one and not show at the first glence */
+.hamburger-menu::before, /* Top Line */
+.hamburger-menu input, /* Middle Line */
+.hamburger-menu::after /* Bottom Line */
+{
+    content: '';
+    background-color: var(--abs-white);
+    height: 3px;
+    width: 100%;
+    transform-origin: left center;
+    /* transition: opacity var(--animation-timing), width var(--animation-timing),
+    rotate var(--animation-timing), translate var(--animation-timing),
+    background-color var(--animation-timing); */
+}
+/* Make the input(Middle Line) into line with appearance attribute*/
+.hamburger-menu input {
+    appearance: none;
+    margin: 0;
+    /* padding: 0; */
+    /* outline: none; */
+    /* pointer-events: none; */
+}
+
+/* ON CHECKED STATE */
+.hamburger-menu:has(input:checked)::before { /* Top Line */
+    rotate: 45deg;
+    /* width: var(--x-width);
+    translate: 0 calc(var(--bar-height) / -2); */
+} 
+.hamburger-menu input:checked { /* Middle Line */
+    opacity: 0;
+    width: 0;
+}
+.hamburger-menu:has(input:checked)::after { /* Bottom Line */
+    rotate: -45deg;
+    /* width: var(--x-width);
+    translate: 0 calc(var(--bar-height) / 2); */
+} 
+
+
+/* ------------------------- */
+
 .help-center{
     font-size: 24px;
     font-weight: 500;
