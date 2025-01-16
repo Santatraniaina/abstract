@@ -6,7 +6,6 @@
     --abs-white : #fff;
 }
 
-/* TODO : Add the font-family to the root */
 @font-face {
     font-family: 'GT America Standard Bold';
     src: url('../fonts/GT-America-Standard-Bold.woff2') format('woff2');
@@ -16,7 +15,6 @@
     font-family: 'GT America Standard Regular';
     src: url('../fonts/GT-America-Standard-Regular.woff2') format('woff2');
 }
-
 
 body{
     font-family:'GT America Standard Regular', sans-serif;
@@ -53,7 +51,18 @@ button{
     color: var(--abs-white);
 }
 
+.logo-with-text{
+    margin-right: 10px;
+    width: 120px;
+    height: 70px;
+}
+
 .header{
+    display: flex;
+    flex-direction: column;
+}
+
+.header-top{
     padding: .6rem 7rem;
     display: flex;
     justify-content: space-between;
@@ -64,10 +73,29 @@ button{
     align-items: center;
 }
 
-.logo-with-text{
-    margin-right: 10px;
-    width: 120px;
-    height: 70px;
+.header-bottom{
+    border-top: var(--abs-white) 1px solid;
+}
+
+.header-bottom > ul{
+    margin: 2em auto;
+    width: 50%;
+}
+
+.header-nav{
+    font-size: 1.5rem;
+    padding: 1em 2em;
+    text-align: center;
+    display: block;
+}
+
+.header-nav:hover{
+    text-decoration: none;
+    opacity: 0.7;
+}
+
+.submit-a-request{
+    border-bottom: var(--abs-white) 1px solid;
 }
 
 .help-center{
@@ -142,7 +170,6 @@ form{
 }
 
 /* TODO : Make border to blue effect to the search input with its button on cursor focus and remove the clear button*/
-
 button[type="submit"]{
     position: absolute;
     right: 0;
@@ -159,9 +186,11 @@ button[type="submit"]:hover{
     color: var(--abs-blue);
 }
 
+
 .main-content{
     /* height: 100vw; */
 }
+
 
 .footer{
     bottom: 0%;
@@ -202,6 +231,7 @@ button[type="submit"]:hover{
     line-height: 1.75rem;
     font-size: 1.25rem;
 }
+
 
 .assistant{
     background-color: var(--abs-blue);
