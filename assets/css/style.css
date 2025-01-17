@@ -101,13 +101,23 @@ button{
 /* Hamburger Menu */
 /* Hamburger Menu Container */
 .hamburger-menu{
-    width: 26px;
-    height: 32px;
+    /* Declare variables */
+    --bar-width: 26px;
+    --bar-height: 3px;
+    --hamburger-gap: 8px;
+    --hamburger-margin: 8px;
+    --animation-timing: 200ms ease-in-out;
+    --hamburger-height: calc(var(--bar-height) * 3 + var(--hamburger-gap) * 2);
+    --x-width: calc((var(--hamburger-height) * 1.41421356237) - var(--bar-height));
+    --animation-timing: 200ms ease-in-out;
+    /* Container style */
+    width: var(--bar-width);
+    height: var(--hamburger-height);
     cursor: pointer;
-    background-color: var(--abs-blue);
+    /* background-color: var(--abs-blue); */
     display: flex;
     flex-direction: column;
-    gap: 8px;
+    gap: var(--hamburger-gap);
 }
 
 /* INITIAL STATE */
@@ -118,38 +128,42 @@ button{
 {
     content: '';
     background-color: var(--abs-white);
-    height: 3px;
+    height: var(--bar-height);
     width: 100%;
-    transform-origin: left center;
-    /* transition: opacity var(--animation-timing), width var(--animation-timing),
-    rotate var(--animation-timing), translate var(--animation-timing),
-    background-color var(--animation-timing); */
+    transition: opacity var(--animation-timing), width var(--animation-timing),
+    rotate var(--animation-timing), translate var(--animation-timing);
+}
+.hamburger-menu::before{
+    transform-origin: top left;
+}
+.hamburger-menu::after{
+    transform-origin: bottom left;
 }
 /* Make the input(Middle Line) into line with appearance attribute*/
 .hamburger-menu input {
     appearance: none;
     margin: 0;
     /* padding: 0; */
-    /* outline: none; */
-    /* pointer-events: none; */
+    outline: none;
+    pointer-events: none;
 }
 
 /* ON CHECKED STATE */
 .hamburger-menu:has(input:checked)::before { /* Top Line */
     rotate: 45deg;
-    /* width: var(--x-width);
-    translate: 0 calc(var(--bar-height) / -2); */
+}
+.hamburger-menu:has(input:checked)::after { /* Bottom Line */
+    rotate: -45deg;
 } 
+.hamburger-menu:has(input:checked)::before,
+.hamburger-menu:has(input:checked)::after{
+    width: var(--x-width);
+    translate:  var(--bar-height) 0;
+}
 .hamburger-menu input:checked { /* Middle Line */
     opacity: 0;
     width: 0;
 }
-.hamburger-menu:has(input:checked)::after { /* Bottom Line */
-    rotate: -45deg;
-    /* width: var(--x-width);
-    translate: 0 calc(var(--bar-height) / 2); */
-} 
-
 
 /* ------------------------- */
 
