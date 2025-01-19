@@ -119,6 +119,8 @@ button{
     display: flex;
     flex-direction: column;
     gap: var(--hamburger-gap);
+    /* Breakpoint at 1024px */
+    visibility: hidden;
 }
 
 /* INITIAL STATE */
@@ -145,8 +147,8 @@ button{
     appearance: none;
     margin: 0;
     /* padding: 0; */
-    /* outline: none;
-    pointer-events: none; */
+    /* outline: none; */
+    pointer-events: none;
 }
 
 /* ON CHECKED STATE */
@@ -168,17 +170,11 @@ button{
 
 .hamburger-nav {
     display: none;
-    opacity: 0;
-    transform: translateY(-20px);
-    transition: opacity var(--animation-timing), transform var(--animation-timing);
 }
 
 .hamburger-nav.show {
     display: block;
-    opacity: 1;
-    transform: translateY(0);
 }
-
 
 /* ------------------------- */
 
@@ -217,6 +213,15 @@ button{
 
 }
 
+@media screen and (max-width: 1024px){
+    .submit, .signin{
+        visibility: hidden;
+    }
+
+    .hamburger-menu{
+        visibility: visible;
+    }
+}
 
 .search{
     background-color: var(--abs-grey);
