@@ -74,6 +74,7 @@ button{
     align-items: center;
 }
 
+/* TODO : Make the hamburger-nav to absolute */
 .header-bottom{
     border-top: var(--abs-white) 1px solid;
     z-index: 1;
@@ -274,6 +275,24 @@ button[type="submit"]{
 button[type="submit"]:hover{
     color: var(--abs-blue);
 }
+
+
+.learn-more{
+    color: var(--abs-blue);
+}
+
+.item{
+    display: flex;
+}
+
+
+
+
+
+
+
+
+
 
 .footer{
     bottom: 0%;
