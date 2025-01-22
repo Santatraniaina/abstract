@@ -6,6 +6,16 @@
     --abs-white : #fff;
 }
 
+.bg-blue{
+    background-color: var(--abs-blue);
+}
+.bg-grey{
+    background-color: var(--abs-grey);
+}
+.bg-black{
+    background-color: var(--abs-black);
+}
+
 @font-face {
     font-family: 'GT America Standard Bold';
     src: url('../fonts/GT-America-Standard-Bold.woff2') format('woff2');
@@ -265,9 +275,10 @@ button[type="submit"]{
     right: 0;
     bottom: 0;
     top: 0;
-    color: var(--abs-black);
+    /* color: var(--abs-black); */
     border: none;
     background: transparent url(../icons/arrow-right.svg) no-repeat center;
+    color: var(--abs-blue);
     background-size: 25px;
     width: 50px;
     cursor: pointer;
@@ -277,13 +288,37 @@ button[type="submit"]:hover{
 }
 
 
+
+.list{
+    width: 80%;
+    margin: 10rem auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    /* align-content: space-between; */
+    gap: 5rem 0;
+}
+
+.item{
+    /* width: 40%; */
+    width: calc(((100vw - 29%) / 2));
+    display: flex;
+}
+
+.item-icon{
+    width: 5.5rem;
+    height: 5.5rem;
+    margin-right: 1.5rem;
+}
+
+.item-description > p{
+    font-size: 1.4rem;
+}
+
 .learn-more{
     color: var(--abs-blue);
 }
 
-.item{
-    display: flex;
-}
 
 
 
